@@ -1,5 +1,4 @@
-
-        :root {
+ :root {  /*Codigo primcipal de donde despues podes usar para el resto del css */
             --primary-color: #002856;
             --secondary-color: #e30613;
             --text-color: #ffffff;
@@ -82,7 +81,7 @@
 
         .titulo p {
             font-size: 1.2em;
-            max-width: 600px;||
+            max-width: 600px;
             margin: 0 auto;
             animation: fadeInUp 1s ease 0.3s;
             opacity: 0;
@@ -122,10 +121,7 @@
             margin-bottom: 15px;
         }
 
-        .card h3 {
-            color: var(--primary-color);
-            margin-bottom: 10px;
-        }
+        
 
         .estadisticas {
             display: flex;
