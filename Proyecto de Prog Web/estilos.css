@@ -28,8 +28,8 @@
 
         header a {
             text-decoration: none;
-            color: inherit; /* Usa el color del h1 */
-            display: inline-block; /* Opcional: mejora el comportamiento visual */
+            color: inherit; 
+            display: inline-block;
         }
 
         header h1 {
