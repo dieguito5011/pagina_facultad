@@ -259,28 +259,27 @@
         .todaslasnoticias img {
             width: 450px;
             height: auto;
-            border-radius: 8px; /* opcional: bordes redondeados */
-            background-color: rgb(245, 225, 239);        /* Fondo blanco */
-            padding: 20px;                  /* Espacio interno */
-            border-radius: 10px;            /* Bordes redondeados */
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Sombra suave */
-            transition: var(--transition); /* Animación suave si hacés hover u otro efecto */
+            border-radius: 8px; 
+            background-color: rgb(245, 225, 239);      
+            padding: 20px;                 
+            border-radius: 10px;            
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
+            transition: var(--transition); 
         }
         
         .todaslasnoticias .texto {
             max-width: 100%;
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             text-align: justify;
-            background-color: rgb(245, 225, 239);        /* Fondo blanco */
-            padding: 20px;                  /* Espacio interno */
-            border-radius: 10px;            /* Bordes redondeados */
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Sombra suave */
-            transition: var(--transition); /* Animación suave si hacés hover u otro efecto */
-        }
+            background-color: rgb(245, 225, 239);      
+            padding: 20px;               
+            border-radius: 10px;           
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
+            transition: var(--transition); 
 
         .titulonoticias {
             background: linear-gradient(rgba(0, 40, 86, 0.8), rgba(0, 40, 86, 0.8)),
-                url('fotos/casla3.jpg'); /* Imagen de fondo */
+                url('fotos/casla3.jpg'); 
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -289,7 +288,7 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            color: white; /* O el color que quieras */
+            color: white; 
             padding: 50px;
             margin-bottom: 40px;
 }
@@ -301,3 +300,4 @@
             animation: fadeInUp 1s ease;
         }
         
+    }
