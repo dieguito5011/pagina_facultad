@@ -1,0 +1,514 @@
+ :root {  /*Codigo primcipal de donde despues podes usar para el resto del css */
+            --primary-color: #002856;
+            --secondary-color: #e30613;
+            --text-color: #ffffff;
+            --transition: all 0.3s ease;
+        }
+
+        *  { /* Codigo universal, le indica a la pagina que: */
+            margin: 0; /*  Eliminar cualquier margen que los navegadores puedan aplicar por defecto a los elementos */
+            padding: 0; /*  Eliminar cualquier relleno (espacio interior) que los navegadores puedan aplicar por defecto a los elementos */
+            box-sizing: border-box; /* Cambiar cómo se calculan los tamaños de los elementos, para que el ancho y la altura incluyan los bordes y el relleno, no solo el contenido */
+        } 
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+            width: 100%;
+        }
+        
+        header {
+            background-color: var(--primary-color);
+            text-align: center;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            color: var(--text-color);
+            animation: fadeInDown 1s ease;
+        }
+        
+        nav {
+            background-color: aqua;
+            width: 100%;
+            background-color: var(--secondary-color);
+            padding: 15px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        nav a {
+            color: var(--text-color);
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            padding: 8px 15px;
+            border-radius: 20px;
+            transition: var(--transition);
+        }
+        
+        nav a:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+        .titulo {
+            background: linear-gradient(rgba(0, 40, 86, 0.8), rgba(0, 40, 86, 0.8)),
+                url('fotos/casla3.jpg'); 
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white; 
+            padding: 50px;
+            margin-bottom: 40px;
+        }
+
+        main{
+            height: 67vh;
+            width: 100%;
+        }
+
+
+        .titulo h2 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            animation: fadeInUp 1s ease;
+        }
+
+        .titulo p {
+            font-size: 1.2em;
+            max-width: 600px;
+            margin: 0 auto;
+            animation: fadeInUp 1s ease 0.3s;
+            opacity: 0;
+            animation-fill-mode: forwards;
+        }
+
+        
+
+        .contenedordefotos {
+            display: flex;
+            height: 100%;
+            padding: 20px;
+            gap: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .fotosnoticias {
+            background: white;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: aqua;
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+        }
+
+        .fotosnoticias:hover {
+            transform: translateY(-10px);
+        }
+
+        .fotosnoticias img {
+            width: 100%;
+            height: 200px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+       
+
+        footer {
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        .social-links {
+            margin: 20px 0;
+        }
+
+        .social-links a {
+            color: var(--text-color);
+            font-size: 1.5em;
+            margin: 0 10px;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+        nav a {
+                margin: 5px 0;
+                display: block;
+                width: 100%;
+                text-align: center;
+            }
+
+        .hero h2 {
+                font-size: 2em;
+            }
+        }
+
+    
+
+        /* Edicion del apartado de noticias */ 
+        /* todo lo que esta aca escrito es lo que agregue*/
+
+        body.otraspags{
+            background-color: rgb(248, 212, 239);
+        }
+        
+        .fotosnoticias {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+        }
+        .fotosnoticias:hover {
+            transform: translateY(-10px);
+        }
+
+        .fotosnoticias img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .fotosnoticias h3{
+            text-align: center;
+        }
+
+        .todaslasnoticias {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px; 
+            margin: 20px;
+        }
+        
+        
+        .todaslasnoticias img {
+            width: 450px;
+            height: auto;
+            border-radius: 8px; 
+            background-color: rgb(245, 225, 239);    
+            padding: 20px;                  
+            border-radius: 10px;           
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
+            transition: var(--transition); 
+        }
+        
+        .todaslasnoticias .texto {
+            max-width: 100%;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-align: justify;
+            background-color: rgb(245, 225, 239);     
+            padding: 20px;                 
+            border-radius: 10px;           
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
+            transition: var(--transition); 
+        }
+
+        .titulonoticias {
+            background: linear-gradient(rgba(0, 40, 86, 0.8), rgba(0, 40, 86, 0.8)),
+                url('fotos/casla3.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white; 
+            padding: 50px;
+            margin-bottom: 40px;
+}
+
+
+        .titulonoticias h2 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            animation: fadeInUp 1s ease;
+        }
+        
+          
+          .contacto {
+            max-width: 500px;
+            margin: 40px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+          }
+          
+          .titulo-contacto {
+            text-align: center;
+            margin-bottom: 20px;
+          }
+          
+          .label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+          }
+          
+          .input,
+          .textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+          }
+          
+          .botonen {
+            background: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+          }
+          
+          .botonen :hover {
+            background: #0056b3;
+          }
+          
+          /* Estilos para la página de jugadores */
+        .plantilla-container {
+            max-width: 1200px;
+            margin: 40px auto;
+        padding: 0 20px;
+            }
+
+        .plantilla-container h2 {
+            text-align: center;
+            color: var(--text-color);
+            margin-bottom: 40px;
+            font-size: 2.5em;
+            }
+
+        /* Campo de fútbol */
+        .campo-futbol {
+            background-color: #2e7d32;
+            width: 100%;
+            max-width: 1000px;
+            height: 600px;
+            margin: 0 auto;
+            position: relative;
+            border: 2px solid white;
+            border-radius: 10px;
+            overflow: hidden;
+            }
+
+        /* Líneas del campo */
+        .area-grande,
+        .area-chica {
+            position: absolute;
+            border: 2px solid white;
+            }
+        .area-grande {
+            width: 40%;
+            height: 20%;
+}
+.area-grande.area-superior {
+    top: 0;
+    left: 30%;
+}
+.area-grande.area-inferior {
+    bottom: 0;
+    left: 30%;
+}
+
+.area-chica {
+    width: 20%;
+    height: 10%;
+}
+.area-chica.area-superior {
+    top: 0%;
+    left: 40%;
+}
+.area-chica.area-inferior {
+    bottom: 0%;
+    left: 40%;
+}
+
+.centro-campo {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+}
+
+.círculo-central {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+/* Puntos de penal */
+.punto-penal {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+}
+.punto-penal-superior {
+    top: 14%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.punto-penal-inferior {
+    bottom: 14%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Jugadores */
+.jugador {
+    margin-bottom: 20px;
+    position: absolute;
+    text-align: center;
+    transition: var(--transition);
+}
+.jugador:hover {
+    transform: scale(1.1);
+}
+.jugador img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid #2e7d32;
+    background-color: #2e7d32;
+    transition: transform 0.3s ease;
+}
+.jugador:hover img {
+    transform: scale(1.1);
+}
+.jugador h4,
+.jugador p {
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+.jugador h4 {
+    margin: 5px 0;
+    font-size: 0.9em;
+}
+.jugador p {
+    font-weight: bold;
+    font-size: 1em;
+}
+
+/* Posiciones de jugadores */
+.posicion-arquero { bottom: -3%; left: 46%; }
+.posicion-defensa-izq { bottom: 20%; left: 5%; }
+.posicion-defensa-izq-centro { bottom: 7%; left: 30%; }
+.posicion-defensa-der-centro { bottom: 7%; left: 60%; }
+.posicion-defensa-der { bottom: 20%; left: 85%; }
+.posicion-medio-izq { bottom: 49%; left: 5%; }
+.posicion-medio-izq-centro { bottom: 36%; left: 25%; }
+.posicion-medio-der-centro { bottom: 36%; left: 65%; }
+.posicion-medio-der { bottom: 50%; left: 85%; }
+.posicion-delantero-izq { bottom: 66%; left: 32%; }
+.posicion-delantero-der { bottom: 66%; left: 60%; }
+
+/* Otros estilos */
+h3 {
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+}
+
+.DT {
+    text-align: right;
+    width: 40%;
+}
+
+ul {
+    text-align: left;
+}
+
+.suplentes {
+    width: 100%;
+    display: flex;
+    gap: 50%;
+}
+
+.estadisticas {
+    width: 100%;
+    text-align: right;
+}
+
+.contenedor {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.izquierda, .derecha {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}

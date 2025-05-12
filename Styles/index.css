@@ -1,0 +1,217 @@
+:root {  /*Codigo primcipal de donde despues podes usar para el resto del css */
+    --primary-color: #002856;
+    --secondary-color: #e30613;
+    --text-color: #ffffff;
+    --transition: all 0.3s ease;
+}
+
+*  { /* Codigo universal, le indica a la pagina que: */
+    margin: 0; /*  Eliminar cualquier margen que los navegadores puedan aplicar por defecto a los elementos */
+    padding: 0; /*  Eliminar cualquier relleno (espacio interior) que los navegadores puedan aplicar por defecto a los elementos */
+    box-sizing: border-box; /* Cambiar cómo se calculan los tamaños de los elementos, para que el ancho y la altura incluyan los bordes y el relleno, no solo el contenido */
+} 
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+    width: 100%;
+}
+
+header {
+    background-color: var(--primary-color);
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: var(--text-color);
+    animation: fadeInDown 1s ease;
+}
+
+nav {
+    background-color: aqua;
+    width: 100%;
+    background-color: var(--secondary-color);
+    padding: 15px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: var(--transition);
+}
+
+nav a:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+.titulo {
+    background: linear-gradient(rgba(0, 40, 86, 0.8), rgba(0, 40, 86, 0.8)),
+        url('fotos/casla3.jpg'); /* Imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white; /* O el color que quieras */
+    padding: 50px;
+    margin-bottom: 40px;
+}
+
+.titulo h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    animation: fadeInUp 1s ease;
+}
+
+.titulo p {
+    font-size: 1.2em;
+    max-width: 600px;
+    margin: 0 auto;
+    animation: fadeInUp 1s ease 0.3s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.contenedorestadisticas {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.contenedordefotos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.fotos {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+}
+
+.fotos:hover {
+    transform: translateY(-10px);
+}
+
+.fotos img {
+    width: 100%;
+    height: 300px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+
+
+.estadisticas {
+    display: flex;
+    justify-content: space-around;
+    margin: 40px 0;
+    flex-wrap: wrap;
+}
+
+.itemsestadisticas {
+    text-align: center;
+    padding: 20px;
+}
+
+.itemsestadisticas i {
+    font-size: 2.5em;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.itemsestadisticas h3 {
+    font-size: 2em;
+    color: var(--secondary-color);
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.social-links {
+    margin: 20px 0;
+}
+
+.social-links a {
+    color: var(--text-color);
+    font-size: 1.5em;
+    margin: 0 10px;
+    transition: var(--transition);
+}
+
+.social-links a:hover {
+    color: var(--secondary-color);
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+nav a {
+        margin: 5px 0;
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+.hero h2 {
+        font-size: 2em;
+    }
+}
