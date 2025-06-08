@@ -18,6 +18,23 @@ body {
     line-height: 1.6;
     width: 100%;
 }
+        button {
+            background-color: var(--primary-color);
+            text-align: end;
+            border: none;
+            padding: 30;
+            margin: 15;
+            cursor: pointer;
+        }
+
+        button:focus {
+            outline: none;
+        }
+        i {
+            font-size: 3rem;
+            color: white
+        }
+
 
 header {
     background-color: var(--primary-color);
@@ -310,4 +327,37 @@ ul {
     margin: 0;
     padding: 0;
     list-style: none;
+}
+.dark-mode {
+    --primary-color: #121212;
+    --secondary-color: #1f1f1f;
+    --text-color: #ffffff;
+    background-color: #000000 !important;
+}
+
+.dark-mode .fotosnoticias,
+.dark-mode .texto,
+.dark-mode .contacto {
+    background-color: #1f1f1f;
+    color: var(--text-color);
+}
+
+.dark-mode nav,
+.dark-mode footer,
+.dark-mode header {
+    background-color: var(--primary-color);
+}
+
+.dark-mode .fotosnoticias img,
+.dark-mode .todaslasnoticias img {
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .campo-futbol {
+    border-color: #ffffff;
+}
+
+.dark-mode .jugador h4,
+.dark-mode .jugador p {
+    color: var(--text-color);
 }
