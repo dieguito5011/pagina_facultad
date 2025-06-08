@@ -1,17 +1,37 @@
-// modoOscuro.js
+document.addEventListener("DOMContentLoaded", () => {
+  const body = document.body;
+  const button = document.getElementById("darkModeButton");
 
-function toggleDarkMode() {
-  document.body.classList.toggle('dark-mode');
- 
-  const icon = document.getElementById("darkModeButton").querySelector("i");
-  if (document.body.classList.contains("dark-mode")) {
-    icon.classList.remove("fa-moon");
-    icon.classList.add("fa-sun");
-  } else {
-    icon.classList.remove("fa-sun");
-    icon.classList.add("fa-moon");
+  // Aplica el modo oscuro si estaba guardado
+  if (localStorage.getItem("modo") === "oscuro") {
+    body.classList.add("dark-mode");
+    // Cambiar ícono si hay <i> dentro del botón
+    const icon = button.querySelector("i");
+    if (icon) {
+      icon.classList.remove("fa-moon");
+      icon.classList.add("fa-sun");
+    }
   }
-}
+
+  // Toggle de modo oscuro
+  window.toggleDarkMode = function () {
+    body.classList.toggle("dark-mode");
+
+    const icon = button.querySelector("i");
+    if (icon) {
+      if (body.classList.contains("dark-mode")) {
+        icon.classList.remove("fa-moon");
+        icon.classList.add("fa-sun");
+        localStorage.setItem("modo", "oscuro");
+      } else {
+        icon.classList.remove("fa-sun");
+        icon.classList.add("fa-moon");
+        localStorage.setItem("modo", "claro");
+      }
+    }
+  };
+});
+
 //EmailJS: envío de formulario
 
 document.addEventListener("DOMContentLoaded", function () {
