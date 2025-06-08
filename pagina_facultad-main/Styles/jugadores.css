@@ -1,0 +1,313 @@
+:root {  /*Codigo primcipal de donde despues podes usar para el resto del css */
+    --primary-color: #002856;
+    --secondary-color: #e30613;
+    --text-color: #ffffff;
+    --transition: all 0.3s ease;
+}
+
+*  { /* Codigo universal, le indica a la pagina que: */
+    margin: 0; /*  Eliminar cualquier margen que los navegadores puedan aplicar por defecto a los elementos */
+    padding: 0; /*  Eliminar cualquier relleno (espacio interior) que los navegadores puedan aplicar por defecto a los elementos */
+    box-sizing: border-box; /* Cambiar cómo se calculan los tamaños de los elementos, para que el ancho y la altura incluyan los bordes y el relleno, no solo el contenido */
+} 
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+    width: 100%;
+}
+
+header {
+    background-color: var(--primary-color);
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: var(--text-color);
+    animation: fadeInDown 1s ease;
+}
+
+nav {
+    background-color: aqua;
+    width: 100%;
+    background-color: var(--secondary-color);
+    padding: 15px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: var(--transition);
+}
+
+nav a:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+.titulo {
+    background: linear-gradient(rgba(0, 40, 86, 0.8), rgba(0, 40, 86, 0.8)),
+        url('fotos/casla3.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white; 
+    padding: 50px;
+    margin-bottom: 40px;
+}
+/* Estilos para la página de jugadores */
+.plantilla-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.plantilla-container h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 40px;
+    font-size: 2.5em;
+}
+
+/* Estilos para el campo de fútbol */
+.campo-futbol {
+    background-color: #2e7d32;
+    width: 100%;
+    max-width: 1000px;
+    height: 600px;
+    margin: 0 auto;
+    position: relative;
+    border: 2px solid white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Líneas del campo */
+.area-grande {
+    position: absolute;
+    width: 40%;
+    height: 20%;
+    border: 2px solid white;
+}
+
+.area-grande.area-superior {
+    top: 0;
+    left: 30%;
+}
+
+.area-grande.area-inferior {
+    bottom: 0;
+    left: 30%;
+}
+
+.area-chica {
+    position: absolute;
+    width: 20%;
+    height: 10%;
+    border: 2px solid white;
+}
+
+.area-chica.area-superior {
+    top: 0%;
+    left: 40%;
+}
+/*en area inferior es la de abajo, le pute bottom: 0% para que se adapte */
+.area-chica.area-inferior {
+    bottom: 0%;
+    left: 40%;
+    
+}
+
+.centro-campo {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    
+}
+
+.círculo-central {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+/* Puntos de penal */
+.punto-penal {
+    position:absolute;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    
+}
+
+.punto-penal-superior {
+    top: 14%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.punto-penal-inferior {
+    bottom: 14%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+/* Posiciones de los jugadores */
+.jugador {
+    margin-bottom: 20px;
+    position: absolute;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.jugador:hover {
+    transform: scale(1.1);
+}
+
+.jugador img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid;
+    color: #2e7d32;
+    background-color:#2e7d32;
+    transition: transform 0.3s ease;
+}
+
+.jugador:hover img {
+    transform: scale(1.1);
+}
+
+.jugador h4 {
+    color: white;
+    margin: 5px 0;
+    font-size: 0.9em;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+}
+
+.jugador p {
+    color: white;
+    font-weight: bold;
+    font-size: 1em;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+}
+
+/* Posiciones específicas */
+.posicion-arquero {
+    bottom: -3%;
+    left: 46%;
+}
+
+.posicion-defensa-izq {
+    bottom: 20%;
+    left: 5%;
+}
+
+.posicion-defensa-izq-centro {
+    bottom: 7%;
+    left: 30%;
+}
+
+.posicion-defensa-der-centro {
+    bottom: 7%;
+    left: 60%;
+}
+
+.posicion-defensa-der {
+    bottom: 20%;
+    left: 85%;
+}
+
+.posicion-medio-izq {
+    bottom: 49%;
+    left: 5%;
+}
+
+.posicion-medio-izq-centro {
+    bottom: 36%;
+    left: 25%;
+}
+
+.posicion-medio-der-centro {
+    bottom: 36%;
+    left: 65%;
+}
+
+.posicion-medio-der {
+    bottom: 50%;
+    left: 85%;
+}
+
+.posicion-delantero-izq {
+    bottom: 66%;
+    left: 32%;
+}
+
+.posicion-delantero-der {
+    bottom: 66%;
+    left: 60%;
+}
+
+h3 {
+    color: #ffffff;
+    font-family: monserrat;
+    width: 100%;
+
+}
+.DT {
+    text-align: right;
+    width: 40%;
+}
+ul {
+   text-align: left;
+   
+}
+.suplentes {
+    width: 100%;
+    display: flex;
+    gap: 50%;
+}
+.estadisticas {
+    width: 100%;
+    text-align: right;
+}
+.contenedor {
+    display: flex;
+    /*justify manda cada lista a un extremo*/
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+.izquierda, .derecha {
+    list-style: disc;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
