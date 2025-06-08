@@ -27,6 +27,21 @@ header {
     flex-direction: column;
 }
 
+        button {
+            background-color: var(--primary-color);
+            text-align: end;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:focus {
+            outline: none;
+        }
+i {
+font-size: 3rem;
+color: white
+}
+
 header h1 {
     margin: 0;
     font-size: 2.5em;
@@ -105,7 +120,8 @@ nav a:hover {
 }
 
 .fotos {
-    background: white;
+    background-color: white;
+    color: #002856;
     border-radius: 10px;
     padding: 20px;
     display: flex;
@@ -215,3 +231,34 @@ nav a {
         font-size: 2em;
     }
 }
+.dark-mode {
+    --primary-color: #121212;
+    --secondary-color: #1f1f1f;
+    --text-color: #ffffff;
+    background-color: #000000 !important;
+}
+
+
+
+
+.dark-mode nav,
+.dark-mode footer,
+.dark-mode header {
+    background-color: var(--primary-color);
+}
+.dark-mode .titulo{
+    background: linear-gradient(rgba(23, 24, 24, 0.8), rgba(18, 18, 18, 0.8)),
+    url('fotos/casla3.jpg'); /* Imagen de fondo */
+}
+.dark-mode .estadisticas{
+    color: var(--text-color);
+}
+.dark-mode h3{
+    color: rgb(207, 0, 0);
+}
+.dark-mode .fotos{
+    background-color: #000000;
+    color: #ffffff;
+    box-shadow: 0 5px 15px rgba(41, 40, 40, 0.1); 
+}
+
