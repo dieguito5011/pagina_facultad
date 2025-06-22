@@ -361,3 +361,58 @@ ul {
 .dark-mode .jugador p {
     color: var(--text-color);
 }
+@media (max-width: 768px) { 
+
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    #darkModeButton {
+        align-self: flex-end;
+        margin: 10px;
+    }
+
+    .campo-futbol {
+    height: auto;
+    padding-bottom: 150%;
+    position: relative;
+}
+
+    .jugador {
+        transform: scale(0.6); /*cambio minimo para responsive*/
+        transform-origin: center;
+}
+
+    .contenedor {
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+    }
+
+    .izquierda,
+    .derecha {
+    width: 100%;
+    }
+
+    .suplentes,
+    .DT {
+        width: 100%;
+        text-align: center;
+    }
+
+    .plantilla-container h2 {
+        font-size: 1.8em;
+    }
+}

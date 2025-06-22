@@ -78,6 +78,7 @@
             background-color: var(--secondary-color);
             transform: translateY(-2px);
         }
+
         .titulo {
             background: linear-gradient(rgba(0, 40, 86, 0.8), rgba(0, 40, 86, 0.8)),
                 url('fotos/casla3.jpg'); 
@@ -95,8 +96,7 @@
         }
 
         main{
-            height: 70vh;
-            width: 100%;
+            width: 100%; /*borre el main para que no se superponga en responsive*/
         }
 
 
@@ -186,6 +186,7 @@
                 transform: translateY(0);
             }
         }
+        
 
         @keyframes fadeInUp {
             from {
@@ -199,6 +200,40 @@
         }
 
         @media (max-width: 768px) {
+            .contenedordefotos {
+                flex-direction: column;
+                padding: 10px;
+    }
+
+        .fotosnoticias {
+                width: 100%;
+                margin-bottom: 20px;
+    }
+
+        .fotosnoticias img {
+                height: auto;
+    }
+
+        header h1 {
+                font-size: 1.5em;
+    }
+
+        nav {
+                flex-direction: row;
+    }
+
+    nav a {
+                display: block;
+                margin: 10px 0;
+    }
+
+    #darkModeButton {
+            align-self: flex-end;
+            margin: 10px;
+    }
+}
+
+
             nav {
                 display: flex;
                 flex-direction: column;
@@ -215,7 +250,6 @@
         .hero h2 {
                 font-size: 2em;
             }
-        }
         
 
     

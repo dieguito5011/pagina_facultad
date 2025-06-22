@@ -1,15 +1,15 @@
-:root {  /*Codigo primcipal de donde despues podes usar para el resto del css */
+:root {
     --primary-color: #002856;
     --secondary-color: #e30613;
     --text-color: #ffffff;
     --transition: all 0.3s ease;
 }
 
-*  { /* Codigo universal, le indica a la pagina que: */
-    margin: 0; /*  Eliminar cualquier margen que los navegadores puedan aplicar por defecto a los elementos */
-    padding: 0; /*  Eliminar cualquier relleno (espacio interior) que los navegadores puedan aplicar por defecto a los elementos */
-    box-sizing: border-box; /* Cambiar cómo se calculan los tamaños de los elementos, para que el ancho y la altura incluyan los bordes y el relleno, no solo el contenido */
-} 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -27,19 +27,20 @@ header {
     flex-direction: column;
 }
 
-        button {
-            background-color: var(--primary-color);
-            text-align: end;
-            border: none;
-            cursor: pointer;
-        }
+button {
+    background-color: var(--primary-color);
+    text-align: end;
+    border: none;
+    cursor: pointer;
+}
 
-        button:focus {
-            outline: none;
-        }
+button:focus {
+    outline: none;
+}
+
 i {
-font-size: 3rem;
-color: white
+    font-size: 3rem;
+    color: white;
 }
 
 header h1 {
@@ -50,9 +51,8 @@ header h1 {
 }
 
 nav {
-    background-color: aqua;
-    width: 100%;
     background-color: var(--secondary-color);
+    width: 100%;
     padding: 15px;
     text-align: center;
     position: sticky;
@@ -75,9 +75,9 @@ nav a:hover {
     background-color: var(--secondary-color);
     transform: translateY(-2px);
 }
+
 .titulo {
-    background: linear-gradient(rgba(0, 40, 86, 0.8), rgba(0, 40, 86, 0.8)),
-        url('fotos/casla3.jpg'); /* Imagen de fondo */
+    background: linear-gradient(rgba(0, 40, 86, 0.8), rgba(0, 40, 86, 0.8)), url('fotos/casla3.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -86,7 +86,7 @@ nav a:hover {
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: white; /* O el color que quieras */
+    color: white;
     padding: 50px;
     margin-bottom: 40px;
 }
@@ -137,13 +137,12 @@ nav a:hover {
 }
 
 .fotos img {
+    max-width: 100%;
     width: 100%;
     height: 300px;
     border-radius: 5px;
     margin-bottom: 15px;
 }
-
-
 
 .estadisticas {
     display: flex;
@@ -213,6 +212,22 @@ footer {
     }
 }
 
+@media (min-width: 769px) {
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 0 15px;
+        width: auto;
+        text-align: center;
+    }
+}
+
 @media (max-width: 768px) {
     nav {
         display: flex;
@@ -220,17 +235,53 @@ footer {
         align-items: center;
     }
 
-nav a {
-        margin: 5px 0;
+    nav a {
         display: block;
         width: 100%;
+        margin: 5px 0;
         text-align: center;
     }
 
-.hero h2 {
+    #darkModeButton {
+        align-self: flex-end;
+        margin: 10px;
+    }
+
+    .titulo h2 {
         font-size: 2em;
     }
+
+    .titulo p {
+        font-size: 1em;
+    }
+
+    .estadisticas {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .itemsestadisticas {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .fotos img {
+        height: auto;
+    }
+
+    .contenedordefotos {
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    i {
+        font-size: 2rem;
+    }
 }
+
 .dark-mode {
     --primary-color: #121212;
     --secondary-color: #1f1f1f;
@@ -238,27 +289,26 @@ nav a {
     background-color: #000000 !important;
 }
 
-
-
-
 .dark-mode nav,
 .dark-mode footer,
 .dark-mode header {
     background-color: var(--primary-color);
 }
-.dark-mode .titulo{
-    background: linear-gradient(rgba(23, 24, 24, 0.8), rgba(18, 18, 18, 0.8)),
-    url('fotos/casla3.jpg'); /* Imagen de fondo */
-}
-.dark-mode .estadisticas{
-    color: var(--text-color);
-}
-.dark-mode h3{
-    color: rgb(207, 0, 0);
-}
-.dark-mode .fotos{
-    background-color: #000000;
-    color: #ffffff;
-    box-shadow: 0 5px 15px rgba(41, 40, 40, 0.1); 
+
+.dark-mode .titulo {
+    background: linear-gradient(rgba(23, 24, 24, 0.8), rgba(18, 18, 18, 0.8)), url('fotos/casla3.jpg');
 }
 
+.dark-mode .estadisticas {
+    color: var(--text-color);
+}
+
+.dark-mode h3 {
+    color: rgb(207, 0, 0);
+}
+
+.dark-mode .fotos {
+    background-color: #000000;
+    color: #ffffff;
+    box-shadow: 0 5px 15px rgba(41, 40, 40, 0.1);
+}
